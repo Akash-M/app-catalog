@@ -1,0 +1,54 @@
+{
+  "name": "app-catalog",
+  "description": "React app to display app catalog",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "exec:eslint": "eslint --cache",
+    "start:frontend": "yarn workspace ui-app-catalog start:dev"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/lint": "^12.1.4",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "concurrently": "^6.3.0",
+    "danger": "^10.6.6",
+    "danger-plugin-conventional-commitlint": "^1.0.4",
+    "danger-plugin-kirinus": "^1.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-kirinus": "^1.0.5",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jest": "^24.5.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-ordered-imports": "^0.5.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-unicorn": "^35.0.0",
+    "husky": "^7.0.2",
+    "jest": "^27.0.6",
+    "jest-environment-node": "^27.0.6",
+    "lint-staged": "^11.1.2",
+    "markdownlint-cli": "^0.28.1",
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "tsconfig-paths": "^3.10.1",
+    "typedoc": "^0.21.9",
+    "typescript": "^4.3.5"
+  },
+  "peerDependencies": {
+    "@types/jest": "^26.0.24"
+  },
+  "workspaces": [
+    "packages/frontend/*"
+  ],
+  "packageManager": "yarn@3.0.0"
+}
