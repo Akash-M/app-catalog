@@ -20,4 +20,5 @@ yarn workspace lib-api test:unit
 yarn workspace lib-api lint
 ```
 
-- The app is tested through standard `eslint` packages with rules specific for a typescript project.
+- The app is linted through custom `eslint` rules specified globally. Additionally, we make use
+  of `prettier` to automate as much as possible.
