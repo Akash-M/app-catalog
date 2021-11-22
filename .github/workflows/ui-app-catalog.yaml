@@ -1,0 +1,33 @@
+name: ui-app-catalog
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/ui-app-catalog.yaml'
+      - 'packages/frontend/ui-app-catalog/**'
+      - 'packages/frontend/lib-api/**'
+      - 'packages/frontend/lib-components/**'
+      - 'packages/frontend/lib-utils/**'
+
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/ui-app-catalog.yaml'
+      - 'packages/frontend/ui-app-catalog/**'
+      - 'packages/frontend/lib-api/**'
+      - 'packages/frontend/lib-components/**'
+      - 'packages/frontend/lib-utils/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        run: yarn install
+      - name: Run linter
+        run: yarn workspace ui-app-catalog lint
+      - name: Run build
+        run: yarn workspace ui-app-catalog build
