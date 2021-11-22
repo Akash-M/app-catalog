@@ -1,19 +1,17 @@
-name: lib-api
+name: lib-utils
 
 on:
   push:
     branches: [ main ]
     paths:
-      - '.github/workflows/lib-api.yaml'
       - '.github/workflows/lib-utils.yaml'
-      - 'packages/frontend/lib-api/**'
+      - 'packages/frontend/lib-utils/**'
 
   pull_request:
     branches: [ main ]
     paths:
-      - '.github/workflows/lib-api.yaml'
       - '.github/workflows/lib-utils.yaml'
-      - 'packages/frontend/lib-api/**'
+      - 'packages/frontend/lib-utils/**'
 
 jobs:
   test:
@@ -24,6 +22,6 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Run linter
-        run: yarn workspace lib-api lint
+        run: yarn workspace lib-utils lint
       - name: Run unit tests
-        run: yarn workspace lib-api test:unit
+        run: yarn workspace lib-utils test:unit
