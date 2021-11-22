@@ -8,7 +8,7 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:Akash-M/app-catalog.git",
-    "directory": "packages/lib/api"
+    "directory": "packages/frontend/lib-api"
   },
   "author": "Akash-M <akash.manjunath@gmail.com>",
   "engines": {

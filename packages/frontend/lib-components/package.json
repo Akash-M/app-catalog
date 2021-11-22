@@ -23,7 +23,7 @@
     "lint": "yarn lint:ts && yarn prettier && yarn lint:scss",
     "prettier": "prettier -c \"src/**/*.{js,ts,tsx,scss}\"",
     "prettier:fix": "prettier --write \"**/*.{js,ts,tsx,scss}\"",
-    "start:dev": "start-storybook -p 6000",
+    "start:dev": "start-storybook -p 9000",
     "test:unit": "jest --config test/unit/jest.config.js --coverage --passWithNoTests",
     "test:unit:update": "yarn test:unit -u",
     "test:unit:watch": "yarn test:unit --watch",
