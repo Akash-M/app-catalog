@@ -1,0 +1,7 @@
+@use 'sass:math';
+// Make sure root element has same font size
+$basePixel: 16;
+
+@function pxToRem($pixels) {
+  @return math.div($pixels, $basePixel) + rem;
+}

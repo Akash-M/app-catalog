@@ -1,0 +1,30 @@
+$fontPath: '../fonts/lato';
+$fontName: 'Lato';
+
+@font-face {
+  font-family: $fontName;
+  font-style: normal;
+  font-weight: normal;
+  src: local('Lato'), url('#{$fontPath}/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: $fontName;
+  font-style: normal;
+  font-weight: bold;
+  src: local('Lato'), url('#{$fontPath}/Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: $fontName;
+  font-style: normal;
+  font-weight: 500;
+  src: local('Lato'), url('#{$fontPath}/Lato-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: $fontName;
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato'), url('#{$fontPath}/Lato-Hairline.ttf') format('truetype');
+}
