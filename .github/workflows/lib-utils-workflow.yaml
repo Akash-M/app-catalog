@@ -1,0 +1,27 @@
+name: lib-utils
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/lib-utils.yaml'
+      - 'packages/frontend/lib-utils/**'
+
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/lib-utils.yaml'
+      - 'packages/frontend/lib-utils/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        run: yarn install
+      - name: Run linter
+        run: yarn workspace lib-utils lint
+      - name: Run unit tests
+        run: yarn workspace lib-utils test:unit
