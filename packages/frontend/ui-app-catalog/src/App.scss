@@ -1,0 +1,9 @@
+@import "lib-components/src/scss/main";
+
+main {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+  width: 100%;
+}

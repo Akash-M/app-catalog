@@ -1,0 +1,50 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  &__links {
+    border-right: 1px solid $ac-black;
+    display: flex;
+    flex-direction: row;
+
+    @include tablet {
+      flex-basis: 20%;
+      flex-direction: column;
+      max-width: 200px;
+      min-width: 200px;
+    }
+
+    > a {
+      border-bottom: 1px solid $ac-black;
+      color: $ac-copy;
+      font-size: 18px;
+      margin-top: 1rem;
+      padding: 1rem;
+      text-decoration: none;
+      width: 50%;
+
+      &.active {
+        border-bottom: 2px solid $ac-accent-color;
+        color: $ac-accent-color;
+        font-weight: bold;
+      }
+
+      @include tablet {
+        width: auto;
+      }
+    }
+  }
+
+  &__screens {
+    @include tablet {
+      flex-basis: 80%;
+      margin-left: 2rem;
+    }
+  }
+}

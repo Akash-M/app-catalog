@@ -1,0 +1,17 @@
+.site-header {
+  align-items: center;
+  background-color: $ac-white;
+  box-shadow: 0 0 0.25em $ac-box-shadow;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 40px;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  position: relative;
+  width: 100%;
+  z-index: map-get($zindex, header);
+
+  > h2 {
+    color: $ac-accent-color;
+  }
+}
