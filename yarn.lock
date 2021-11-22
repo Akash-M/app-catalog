@@ -23,9 +23,9 @@ __metadata:
   languageName: node
   linkType: soft
 
-"#@link:./test::locator=ui-consents%40workspace%3Apackages%2Ffrontend%2Fui-consents":
+"#@link:./test::locator=ui-app-catalog%40workspace%3Apackages%2Ffrontend%2Fui-app-catalog":
   version: 0.0.0-use.local
-  resolution: "#@link:./test::locator=ui-consents%40workspace%3Apackages%2Ffrontend%2Fui-consents"
+  resolution: "#@link:./test::locator=ui-app-catalog%40workspace%3Apackages%2Ffrontend%2Fui-app-catalog"
   languageName: node
   linkType: soft
 
@@ -47,9 +47,9 @@ __metadata:
   languageName: node
   linkType: soft
 
-"$@link:./src::locator=ui-consents%40workspace%3Apackages%2Ffrontend%2Fui-consents":
+"$@link:./src::locator=ui-app-catalog%40workspace%3Apackages%2Ffrontend%2Fui-app-catalog":
   version: 0.0.0-use.local
-  resolution: "$@link:./src::locator=ui-consents%40workspace%3Apackages%2Ffrontend%2Fui-consents"
+  resolution: "$@link:./src::locator=ui-app-catalog%40workspace%3Apackages%2Ffrontend%2Fui-app-catalog"
   languageName: node
   linkType: soft
 
@@ -26415,9 +26415,9 @@ typescript@^4.3.5:
   languageName: node
   linkType: hard
 
-"ui-consents@workspace:packages/frontend/ui-consents":
+"ui-app-catalog@workspace:packages/frontend/ui-app-catalog":
   version: 0.0.0-use.local
-  resolution: "ui-consents@workspace:packages/frontend/ui-consents"
+  resolution: "ui-app-catalog@workspace:packages/frontend/ui-app-catalog"
   dependencies:
     "#": "link:./test"
     $: "link:./src"
