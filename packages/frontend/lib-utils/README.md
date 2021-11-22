@@ -1,6 +1,6 @@
-# lib-api
+# lib-utils
 
-Library of api calls relevant for the app catalog display.
+Library of utility files relevant for the app catalog.
 
 // TODO: setup github actions badge
 
@@ -11,13 +11,13 @@ Library of api calls relevant for the app catalog display.
 The app is tested primarily through unit tests using [jest](https://jestjs.io/).
 
 ```sh
-yarn workspace lib-api test:unit
+yarn workspace lib-utils test:unit
 ```
 
 ### Linting
 
 ```sh
-yarn workspace lib-api lint
+yarn workspace lib-utils lint
 ```
 
 - The app is linted through custom `eslint` rules specified globally. Additionally, we make use
