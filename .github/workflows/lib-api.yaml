@@ -14,7 +14,7 @@ on:
       - 'packages/frontend/lib-api/**'
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
