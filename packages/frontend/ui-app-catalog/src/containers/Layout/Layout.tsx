@@ -3,7 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 
 import SiteHeader from '$/components/SiteHeader';
 import { AppRoutes } from '$/router/routes';
-import CatalogList from '$/views/CatalogList';
+import AppDetail from '$/views/AppDetail';
+import AppList from '$/views/AppList';
 import './Layout.scss';
 
 export function Layout(): JSX.Element {
@@ -13,7 +14,9 @@ export function Layout(): JSX.Element {
 
       <section className="layout__screens">
         <Routes>
-          <Route element={<CatalogList />} path={`/${AppRoutes.Cataloglist}`} />
+          <Route element={<AppList />} path={`/${AppRoutes.AppList}`} />
+
+          <Route element={<AppDetail />} path={`/${AppRoutes.AppDetail}`} />
         </Routes>
       </section>
     </article>

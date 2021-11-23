@@ -1,16 +1,16 @@
 import { atom } from 'recoil';
 
-export const CatalogListState = atom<AppCatalog.Catalog[]>({
+export const AppListState = atom<AppCatalog.Catalog[]>({
   key: 'CatalogList',
   default: [],
 });
 
-export interface CatalogListPaginator {
+export interface AppListPaginator {
   perPage: number;
   currentPage: number;
 }
-export const CatalogListPaginatorState = atom<CatalogListPaginator>({
-  key: 'CatalogListPaginator',
+export const AppListPaginatorState = atom<AppListPaginator>({
+  key: 'AppListPaginator',
   default: {
     currentPage: 1,
     perPage: 2,

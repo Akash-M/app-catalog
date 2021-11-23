@@ -1,3 +1,4 @@
 export enum AppRoutes {
-  Cataloglist = '',
+  AppList = '',
+  AppDetail = '/app/:id',
 }

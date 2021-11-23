@@ -10,7 +10,7 @@ export function SiteHeader(): JSX.Element {
 
   return (
     <nav className="site-header">
-      <NavLink to={`/${AppRoutes.Cataloglist}`}>
+      <NavLink to={`/${AppRoutes.AppList}`}>
         <h2>{t('Global.appName')}</h2>
       </NavLink>
     </nav>

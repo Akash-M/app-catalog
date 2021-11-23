@@ -1,0 +1,72 @@
+.ac-tile {
+  align-items: flex-start;
+  background-color: $ac-tile-background;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 292px;
+  padding: 1.5rem 1rem;
+  position: relative;
+  width: 340px;
+  word-break: break-word;
+
+  &--clickable {
+    cursor: pointer;
+    &:hover {
+      background-color: $ac-tile-background-hover;
+    }
+
+    &:hover .title {
+      color: $ac-theme-accent;
+    }
+  }
+
+  > .icon {
+    align-items: center;
+    background-color: $ac-white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    height: 3rem;
+    margin-bottom: 1rem;
+    width: 3rem;
+    // For svg icons
+    > svg {
+      color: $ac-theme-accent;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    > img {
+      border-radius: inherit;
+      height: inherit;
+      width: inherit;
+    }
+  }
+
+  > .title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  > .subtitle {
+    color: $ac-grey-1;
+    font-size: 1rem;
+  }
+
+  > .details {
+    color: $ac-grey-1;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+
+    svg {
+      margin-right: 0.5rem;
+    }
+  }
+}
