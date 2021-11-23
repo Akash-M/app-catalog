@@ -3,15 +3,18 @@
   background-color: $ac-white;
   box-shadow: 0 0 0.25em $ac-box-shadow;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row;
   height: 40px;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 1rem 1.5rem;
   position: relative;
   width: 100%;
   z-index: map-get($zindex, header);
 
-  > h2 {
+  > a {
     color: $ac-accent-color;
+    font-size: pxToRem(16);
+    margin-left: pxToRem(32);
+    text-decoration: none;
   }
 }

@@ -1,1 +1,3 @@
-header: App Catalog
+appName: App Catalog
+routes:
+  catalogList: App Catalog
