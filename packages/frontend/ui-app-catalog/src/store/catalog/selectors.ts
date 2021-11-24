@@ -11,3 +11,17 @@ export const AppNameSelector = selector({
     }));
   },
 });
+
+export const AppAuthorSelector = selector({
+  key: 'AppNameSelector',
+  get: ({ get }) => {
+    const distinctAppAuthors = new Set(
+      get(AppListState).map((app) => app.author),
+    );
+
+    return [...distinctAppAuthors].map((author) => ({
+      label: author,
+      value: author,
+    }));
+  },
+});

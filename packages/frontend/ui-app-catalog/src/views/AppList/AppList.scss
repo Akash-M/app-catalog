@@ -1,4 +1,14 @@
 .app-list {
+  &__filters {
+    display: flex;
+    flex-flow: row wrap;
+
+    > div {
+      padding: 1.5rem 1rem;
+      width: 250px;
+    }
+  }
+
   &__tiles {
     display: flex;
     flex-flow: row wrap;
