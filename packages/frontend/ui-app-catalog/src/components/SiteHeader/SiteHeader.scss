@@ -3,17 +3,21 @@
   background-color: $ac-white;
   box-shadow: 0 0 0.25em $ac-box-shadow;
   display: flex;
-  flex-flow: row;
-  height: 40px;
-  justify-content: flex-start;
+  flex-direction: row;
+  height: fit-content;
+  justify-content: space-between;
   padding: 1rem 1.5rem;
   position: relative;
-  width: 100%;
+  width: auto;
   z-index: map-get($zindex, header);
 
   > a {
     color: $ac-accent-color;
     font-size: pxToRem(16);
     text-decoration: none;
+  }
+
+  &__search {
+    width: 250px;
   }
 }

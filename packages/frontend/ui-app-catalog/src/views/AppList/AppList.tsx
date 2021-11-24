@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
-
-import { getApps } from 'lib-api/src/catalog';
+import { useRecoilValue } from 'recoil';
 
 import { AppListState } from '$/store/catalog/atoms';
 import './AppList.scss';
@@ -13,15 +11,6 @@ export function AppList(): JSX.Element {
   const navigate = useNavigate();
 
   const catalogList = useRecoilValue(AppListState);
-  const setCatalogList = useSetRecoilState(AppListState);
-
-  const fetchCatalogList = async () => {
-    setCatalogList(await getApps());
-  };
-
-  useEffect(() => {
-    void fetchCatalogList();
-  }, []);
 
   return (
     <article className="app-list">
