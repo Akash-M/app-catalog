@@ -1,0 +1,39 @@
+.app-detail {
+	> section {
+		> img {
+			margin-bottom: pxToRem(32);
+			width: 50px;
+		}
+
+		> .info {
+			background-color: $ac-tile-background;
+			border-radius: pxToRem(16);
+			margin-bottom: pxToRem(32);
+
+			> div {
+				align-items: center;
+				border-bottom: 1px solid $ac-box-shadow-2;
+				display: flex;
+				flex-direction: row;
+				padding: 0 1rem;
+
+				> h4 {
+					color: $ac-copy;
+					width: 100px;
+				}
+
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
+
+		> .readme {
+			background-color: $ac-tile-background;
+			border-radius: pxToRem(16);
+			cursor: not-allowed;
+			padding: 1.5rem 1rem;
+			pointer-events: none;
+		}
+	}
+}

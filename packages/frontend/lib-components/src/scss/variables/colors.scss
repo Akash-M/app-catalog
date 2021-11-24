@@ -11,7 +11,9 @@ $ac-grey: #eaeaec;
 $ac-white: #fff;
 
 // Box shadows
+// TODO: rename this to border.
 $ac-box-shadow: rgba(0, 0, 0, 0.15);
+$ac-box-shadow-2: rgba(0, 0, 0, 0.05);
 
 // Tile colors
 $titanium-white: #f3f3f3;
@@ -23,6 +25,8 @@ $ac-blue: #1e3a63; // Primary
 $ac-theme-accent: $ac-blue;
 $graphite: #737373;
 $ac-grey-1: $graphite;
+
+$ac-text-secondary-dark: rgba(187, 199, 222, 0.8);
 
 $ac-green: #54c6a0;
 
