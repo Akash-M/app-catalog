@@ -10,14 +10,14 @@ import Layout from '$/containers/Layout';
 import { AppListState } from '$/store/catalog/atoms';
 
 const App = (): JSX.Element => {
-  const setCatalogList = useSetRecoilState(AppListState);
+  const setAppList = useSetRecoilState(AppListState);
 
-  const fetchCatalogList = async () => {
-    setCatalogList(await getApps());
+  const fetchAppList = async () => {
+    setAppList(await getApps());
   };
 
   useEffect(() => {
-    void fetchCatalogList();
+    void fetchAppList();
   }, []);
 
   return (

@@ -7,13 +7,13 @@ export const AppNameSelector = selector({
   get: ({ get }) => {
     return get(AppListState).map((app) => ({
       label: app.name,
-      value: app.name,
+      value: app.id,
     }));
   },
 });
 
 export const AppAuthorSelector = selector({
-  key: 'AppNameSelector',
+  key: 'AppAuthorSelector',
   get: ({ get }) => {
     const distinctAppAuthors = new Set(
       get(AppListState).map((app) => app.author),
