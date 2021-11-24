@@ -34,7 +34,7 @@ export function AppDetail(): JSX.Element {
 
   useEffect(() => {
     void fetchAppDetail();
-  }, []);
+  }, [id]);
 
   return (
     <article className="app-detail">

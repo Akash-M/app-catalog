@@ -1,35 +1,59 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
-
-import { getApps } from 'lib-api/src/catalog';
+// eslint-disable-next-line import/named,ordered-imports/ordered-imports
+import Select, { MultiValue } from 'react-select';
+import { useRecoilValue } from 'recoil';
 
 import { AppListState } from '$/store/catalog/atoms';
+import { AppAuthorSelector } from '$/store/catalog/selectors';
 import './AppList.scss';
 
 export function AppList(): JSX.Element {
   const { t } = useTranslation(['Global', 'AppList']);
   const navigate = useNavigate();
+  const [visibleAppList, setVisibleAppList] = useState<AppCatalog.Catalog[]>(
+    [],
+  );
 
-  const catalogList = useRecoilValue(AppListState);
-  const setCatalogList = useSetRecoilState(AppListState);
+  const appList = useRecoilValue(AppListState);
+  const authorList = useRecoilValue(AppAuthorSelector);
 
-  const fetchCatalogList = async () => {
-    setCatalogList(await getApps());
+  const handleAuthorSelect = (
+    items: MultiValue<{ label: string | undefined; value: string | undefined }>,
+  ) => {
+    if (items.length === 0) {
+      setVisibleAppList(appList);
+      return;
+    }
+    setVisibleAppList(
+      appList.filter((app) => {
+        return items.map((item) => item.value).includes(app.author);
+      }),
+    );
   };
 
   useEffect(() => {
-    void fetchCatalogList();
-  }, []);
+    setVisibleAppList(appList);
+  }, [appList]);
 
   return (
     <article className="app-list">
       <h2>{t('AppList.header')}</h2>
 
+      <section className="app-list__filters">
+        <Select
+          isMulti
+          className="app-list__filters__author"
+          options={authorList}
+          placeholder={'Filter by Author'}
+          onChange={handleAuthorSelect}
+        />
+      </section>
+
       <section className="app-list__tiles">
-        {catalogList.length > 0 &&
-          catalogList.map((catalog, catalogIndex) => {
+        {visibleAppList.length > 0 &&
+          visibleAppList.map((catalog, catalogIndex) => {
             return (
               // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
               <div
