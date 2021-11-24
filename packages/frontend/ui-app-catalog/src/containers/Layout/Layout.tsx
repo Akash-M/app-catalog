@@ -1,20 +1,22 @@
 import React from 'react';
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
+import SiteHeader from '$/components/SiteHeader';
 import { AppRoutes } from '$/router/routes';
-import CatalogList from '$/views/CatalogList';
+import AppDetail from '$/views/AppDetail';
+import AppList from '$/views/AppList';
 import './Layout.scss';
 
 export function Layout(): JSX.Element {
   return (
     <article className="layout">
-      <aside className="layout__links">
-        <NavLink to={`/${AppRoutes.Cataloglist}`}>Catalog List</NavLink>
-      </aside>
+      <SiteHeader />
 
       <section className="layout__screens">
         <Routes>
-          <Route element={<CatalogList />} path={`/${AppRoutes.Cataloglist}`} />
+          <Route element={<AppList />} path={`/${AppRoutes.AppList}`} />
+
+          <Route element={<AppDetail />} path={`/${AppRoutes.AppDetail}`} />
         </Routes>
       </section>
     </article>

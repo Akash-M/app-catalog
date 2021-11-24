@@ -1,0 +1,10 @@
+.app-list {
+  &__tiles {
+    display: flex;
+    flex-flow: row wrap;
+
+    > .ac-tile {
+      margin: pxToRem(16);
+    }
+  }
+}

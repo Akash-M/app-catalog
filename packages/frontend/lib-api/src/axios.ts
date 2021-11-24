@@ -10,3 +10,5 @@ export const appCatalogApi = axios.create({
   ...requestConfig,
   baseURL: BASE_URL,
 });
+
+export const externalApi = axios.create({ ...requestConfig });

@@ -1,0 +1,53 @@
+.ac-tile {
+  align-items: flex-start;
+  background-color: $ac-tile-background;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 200px;
+  padding: 1.5rem 1rem;
+  position: relative;
+  width: 340px;
+  word-break: break-word;
+
+  &:hover {
+    background-color: $ac-tile-background-hover;
+  }
+
+  &:hover .title {
+    color: $ac-theme-accent;
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+    > img {
+      border-radius: 50%;
+      display: block;
+      height: 40px;
+      width: 40px;
+    }
+
+    > .title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-left: pxToRem(16);
+    }
+  }
+
+  > .details {
+    color: $ac-grey-1;
+    display: flex;
+    flex-direction: column;
+    font-size: pxToRem(14);
+    line-height: pxToRem(20);
+
+    > p {
+      margin-bottom: pxToRem(8);
+    }
+  }
+}
