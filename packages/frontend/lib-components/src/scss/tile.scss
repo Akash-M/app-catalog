@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   height: auto;
-  min-height: 350px;
+  min-height: 200px;
   padding: 1.5rem 1rem;
   position: relative;
   width: 340px;
@@ -20,27 +20,23 @@
     color: $ac-theme-accent;
   }
 
-  > img {
+  &__header {
     align-items: center;
-    background-color: $ac-white;
-    border-radius: 50%;
     display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    height: 3rem;
-    margin-bottom: 1rem;
-    width: 3rem;
-  }
+    flex-direction: row;
 
-  > .title {
-    font-size: 1.125rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
+    > img {
+      border-radius: 50%;
+      display: block;
+      height: 40px;
+      width: 40px;
+    }
 
-  > .subtitle {
-    color: $ac-grey-1;
-    font-size: 1rem;
+    > .title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-left: pxToRem(16);
+    }
   }
 
   > .details {

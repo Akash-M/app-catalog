@@ -38,48 +38,26 @@ export function AppList(): JSX.Element {
                 // TODO: use AppRoutes enum.
                 onClick={() => navigate(`/app/${catalog.id}`)}
               >
-                {catalog.iconURL && (
-                  <img
-                    alt={catalog.iconURL}
-                    className="icon"
-                    src={catalog.iconURL}
-                  />
-                )}
+                <div className="ac-tile__header">
+                  {catalog.iconURL && (
+                    <img
+                      alt={catalog.iconURL}
+                      className="icon"
+                      src={catalog.iconURL}
+                    />
+                  )}
 
-                <p className="title">{catalog.name}</p>
-
-                <div className="sub-title">
-                  <p>ID: {catalog.id}</p>
-
-                  <p>Version: {catalog.version}</p>
+                  <p className="title">{catalog.name}</p>
                 </div>
 
                 <div className="details">
+                  <p>ID: {catalog.id}</p>
+
+                  <p>Version: {catalog.version}</p>
+
                   <p>Description: {catalog.description}</p>
 
                   {catalog.author && <p>Author: {catalog.author}</p>}
-
-                  {catalog.url && (
-                    <p>
-                      URL:
-                      <a href={catalog.url} rel="noreferrer" target="_blank">
-                        {catalog.url}
-                      </a>
-                    </p>
-                  )}
-
-                  {catalog.readmeURL && (
-                    <p>
-                      ReadME:
-                      <a
-                        href={catalog.readmeURL}
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        {catalog.readmeURL}
-                      </a>
-                    </p>
-                  )}
                 </div>
               </div>
             );
