@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import Select from 'react-select';
+// eslint-disable-next-line import/named,ordered-imports/ordered-imports
+import Select, { MultiValue } from 'react-select';
 import { useRecoilValue } from 'recoil';
 
 import { AppListState } from '$/store/catalog/atoms';
@@ -11,9 +12,30 @@ import './AppList.scss';
 export function AppList(): JSX.Element {
   const { t } = useTranslation(['Global', 'AppList']);
   const navigate = useNavigate();
+  const [visibleAppList, setVisibleAppList] = useState<AppCatalog.Catalog[]>(
+    [],
+  );
 
-  const catalogList = useRecoilValue(AppListState);
+  const appList = useRecoilValue(AppListState);
   const authorList = useRecoilValue(AppAuthorSelector);
+
+  const handleAuthorSelect = (
+    items: MultiValue<{ label: string | undefined; value: string | undefined }>,
+  ) => {
+    if (items.length === 0) {
+      setVisibleAppList(appList);
+      return;
+    }
+    setVisibleAppList(
+      appList.filter((app) => {
+        return items.map((item) => item.value).includes(app.author);
+      }),
+    );
+  };
+
+  useEffect(() => {
+    setVisibleAppList(appList);
+  }, [appList]);
 
   return (
     <article className="app-list">
@@ -21,15 +43,17 @@ export function AppList(): JSX.Element {
 
       <section className="app-list__filters">
         <Select
+          isMulti
           className="app-list__filters__author"
           options={authorList}
-          placeholder={'Search'}
+          placeholder={'Filter by Author'}
+          onChange={handleAuthorSelect}
         />
       </section>
 
       <section className="app-list__tiles">
-        {catalogList.length > 0 &&
-          catalogList.map((catalog, catalogIndex) => {
+        {visibleAppList.length > 0 &&
+          visibleAppList.map((catalog, catalogIndex) => {
             return (
               // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
               <div
