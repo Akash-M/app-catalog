@@ -5,6 +5,9 @@
   width: 100%;
 
   &__screens {
-    margin: pxToRem(32);
+    align-self: center;
+    margin-top: pxToRem(32);
+    max-width: 1440px;
+    width: 80%;
   }
 }

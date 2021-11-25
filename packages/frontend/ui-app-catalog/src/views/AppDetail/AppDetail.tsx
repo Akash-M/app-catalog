@@ -8,6 +8,7 @@ import { getAppById, getAppReadme } from 'lib-api/src/catalog';
 import './AppDetail.scss';
 
 export function AppDetail(): JSX.Element {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t } = useTranslation(['Global', 'AppDetail']);
   // TODO: fix type.
   const { id } = useParams<any>();
@@ -38,10 +39,10 @@ export function AppDetail(): JSX.Element {
 
   return (
     <article className="app-detail">
-      <h2>{t('AppDetail.header')}</h2>
-
       {appDetail && !error && (
-        <section className="app-detail__info">
+        <section>
+          <h2>{appDetail.name}</h2>
+
           {appDetail.iconURL && (
             <img
               alt={appDetail.iconURL}
@@ -50,25 +51,38 @@ export function AppDetail(): JSX.Element {
             />
           )}
 
-          <p className="title">{appDetail.name}</p>
+          <div className="info">
+            <div>
+              <h4>ID</h4> <p>{appDetail.id}</p>
+            </div>
 
-          <p>ID: {appDetail.id}</p>
+            <div>
+              <h4>Version</h4> <p>{appDetail.version}</p>
+            </div>
 
-          <p>Version: {appDetail.version}</p>
+            <div>
+              <h4>Description</h4> <p>{appDetail.description}</p>
+            </div>
 
-          <p>Description: {appDetail.description}</p>
+            {appDetail.author && (
+              <div>
+                <h4>Author</h4> <p>{appDetail.author}</p>
+              </div>
+            )}
 
-          {appDetail.author && <p>Author: {appDetail.author}</p>}
+            {appDetail.url && (
+              <div>
+                <h4>URL</h4>
+                <a href={appDetail.url} rel="noreferrer" target="_blank">
+                  {appDetail.url}
+                </a>
+              </div>
+            )}
+          </div>
 
-          {appDetail.url && (
-            <p>
-              <a href={appDetail.url} rel="noreferrer" target="_blank">
-                {appDetail.url}
-              </a>
-            </p>
+          {appDetail.readmeURL && (
+            <ReactMarkdown className="readme">{appReadme}</ReactMarkdown>
           )}
-
-          {appDetail.readmeURL && <ReactMarkdown>{appReadme}</ReactMarkdown>}
         </section>
       )}
     </article>

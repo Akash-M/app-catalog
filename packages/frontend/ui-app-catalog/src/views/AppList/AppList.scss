@@ -2,10 +2,11 @@
   &__filters {
     display: flex;
     flex-flow: row wrap;
+    margin-bottom: pxToRem(16);
+    margin-left: pxToRem(16);
 
-    > div {
-      padding: 1.5rem 1rem;
-      width: 250px;
+    > .filter {
+      width: 350px;
     }
   }
 

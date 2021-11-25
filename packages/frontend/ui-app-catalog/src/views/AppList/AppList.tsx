@@ -44,7 +44,7 @@ export function AppList(): JSX.Element {
       <section className="app-list__filters">
         <Select
           isMulti
-          className="app-list__filters__author"
+          className="filter"
           options={authorList}
           placeholder={'Filter by Author'}
           onChange={handleAuthorSelect}
@@ -53,35 +53,47 @@ export function AppList(): JSX.Element {
 
       <section className="app-list__tiles">
         {visibleAppList.length > 0 &&
-          visibleAppList.map((catalog, catalogIndex) => {
+          visibleAppList.map((app, appIndex) => {
             return (
               // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
               <div
-                key={catalogIndex}
+                key={appIndex}
                 className="ac-tile"
                 // TODO: use AppRoutes enum.
-                onClick={() => navigate(`/app/${catalog.id}`)}
+                onClick={() => navigate(`/app/${app.id}`)}
               >
                 <div className="ac-tile__header">
-                  {catalog.iconURL && (
-                    <img
-                      alt={catalog.iconURL}
-                      className="icon"
-                      src={catalog.iconURL}
-                    />
+                  {app.iconURL && (
+                    <img alt={app.iconURL} className="icon" src={app.iconURL} />
                   )}
 
-                  <p className="title">{catalog.name}</p>
+                  <p className="title">{app.name}</p>
                 </div>
 
-                <div className="details">
-                  <p>ID: {catalog.id}</p>
+                <div className="ac-tile__details">
+                  <p>Description: {app.description}</p>
 
-                  <p>Version: {catalog.version}</p>
+                  {app.author && <p>Author: {app.author}</p>}
+                </div>
 
-                  <p>Description: {catalog.description}</p>
+                <div className="ac-tile__chips">
+                  {app.url ? (
+                    <span className="chip chip--available">URL available</span>
+                  ) : (
+                    <span className="chip chip--unavailable">
+                      URL unavailable
+                    </span>
+                  )}
 
-                  {catalog.author && <p>Author: {catalog.author}</p>}
+                  {app.readmeURL ? (
+                    <span className="chip chip--available">
+                      ReadMe Available
+                    </span>
+                  ) : (
+                    <span className="chip chip--unavailable">
+                      ReadMe Unavailable
+                    </span>
+                  )}
                 </div>
               </div>
             );
