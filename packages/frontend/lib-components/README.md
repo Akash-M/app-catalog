@@ -4,7 +4,7 @@ Frontend library of components. This is our custom component library for the app
 consisting of UI components without any business logic. We make use storybook to render the components to help with
 rendering the component library.
 
-// TODO: setup github actions badge
+[![lib-components](https://github.com/Akash-M/app-catalog/actions/workflows/lib-components-workflow.yaml/badge.svg)](https://github.com/Akash-M/app-catalog/actions/workflows/lib-components-workflow.yaml)
 
 ## How to write stories:
 

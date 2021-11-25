@@ -3,7 +3,10 @@ React app to display application catalog based on https://github.com/giantswarm/
 
 ## Pipeline status:
 
-// TODO: setup pipeline badges
+[![lib-api](https://github.com/Akash-M/app-catalog/actions/workflows/lib-api-workflow.yaml/badge.svg)](https://github.com/Akash-M/app-catalog/actions/workflows/lib-api-workflow.yaml)
+[![lib-components](https://github.com/Akash-M/app-catalog/actions/workflows/lib-components-workflow.yaml/badge.svg)](https://github.com/Akash-M/app-catalog/actions/workflows/lib-components-workflow.yaml)
+[![lib-utils](https://github.com/Akash-M/app-catalog/actions/workflows/lib-utils-workflow.yaml/badge.svg)](https://github.com/Akash-M/app-catalog/actions/workflows/lib-utils-workflow.yaml)
+[![ui-app-catalog](https://github.com/Akash-M/app-catalog/actions/workflows/ui-app-catalog-workflow.yaml/badge.svg)](https://github.com/Akash-M/app-catalog/actions/workflows/ui-app-catalog-workflow.yaml)
 
 ## Prerequisites
 

@@ -2,7 +2,7 @@
 
 Library of api calls relevant for the app catalog display.
 
-// TODO: setup github actions badge
+[![lib-api](https://github.com/Akash-M/app-catalog/actions/workflows/lib-api-workflow.yaml/badge.svg)](https://github.com/Akash-M/app-catalog/actions/workflows/lib-api-workflow.yaml)
 
 ### Testing philosophy
 
