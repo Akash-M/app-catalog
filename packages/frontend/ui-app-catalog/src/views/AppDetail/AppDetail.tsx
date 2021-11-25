@@ -8,6 +8,7 @@ import { getAppById, getAppReadme } from 'lib-api/src/catalog';
 import './AppDetail.scss';
 
 export function AppDetail(): JSX.Element {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t } = useTranslation(['Global', 'AppDetail']);
   // TODO: fix type.
   const { id } = useParams<any>();
