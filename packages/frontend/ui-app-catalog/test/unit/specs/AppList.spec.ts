@@ -3,7 +3,6 @@ import { setI18n } from 'react-i18next';
 
 import { getApps } from 'lib-api/src/catalog';
 import { customRenderer } from 'lib-utils/src/testing/factory';
-import { flushPromises } from 'lib-utils/src/testing/flush-promises';
 import { I18N_MISSING_KEY, loadI18n } from 'lib-utils/src/testing/i18n';
 
 import App from '$/App';
@@ -30,10 +29,6 @@ describe('<App />', () => {
   test('should render list of apps on load', async () => {
     (getApps as jest.Mock).mockResolvedValueOnce(appListFixtures);
     const { container } = customRenderer(App, initializeState);
-    await waitFor(async () => {
-      await flushPromises();
-      expect(container.firstChild).toMatchSnapshot();
-    });
     await waitFor(() => expect(getApps as jest.Mock).toHaveBeenCalledTimes(1));
     expect(container.firstChild!.textContent).not.toContain(I18N_MISSING_KEY);
     expect(container.firstChild).toMatchSnapshot();

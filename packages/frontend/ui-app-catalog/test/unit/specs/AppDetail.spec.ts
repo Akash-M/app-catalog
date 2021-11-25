@@ -3,7 +3,6 @@ import { setI18n } from 'react-i18next';
 
 import { getAppById, getAppReadme, getApps } from 'lib-api/src/catalog';
 import { customRenderer } from 'lib-utils/src/testing/factory';
-import { flushPromises } from 'lib-utils/src/testing/flush-promises';
 import { I18N_MISSING_KEY, loadI18n } from 'lib-utils/src/testing/i18n';
 
 import App from '$/App';
@@ -40,7 +39,6 @@ describe('<App />', () => {
     (getApps as jest.Mock).mockResolvedValueOnce(appListFixtures);
     (getAppReadme as jest.Mock).mockResolvedValueOnce('mock-read-me');
     const { container } = customRenderer(App, initializeState);
-    await flushPromises();
     await waitFor(() => expect(getApps as jest.Mock).toHaveBeenCalledTimes(1));
     fireEvent.click(screen.getByText('prometheus-operator-app-chart'));
     await waitFor(() => {
