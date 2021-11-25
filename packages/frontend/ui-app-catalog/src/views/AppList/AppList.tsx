@@ -47,10 +47,7 @@ export function AppList(): JSX.Element {
           className="filter"
           options={authorList}
           placeholder={'Filter by Author'}
-          onChange={(e) => {
-            console.info(e);
-            handleAuthorSelect(e);
-          }}
+          onChange={(e) => handleAuthorSelect(e)}
         />
       </section>
 
@@ -62,7 +59,6 @@ export function AppList(): JSX.Element {
               <div
                 key={appIndex}
                 className="ac-tile"
-                // TODO: use AppRoutes enum.
                 onClick={() => navigate(`/app/${app.id}`)}
               >
                 <div className="ac-tile__header">

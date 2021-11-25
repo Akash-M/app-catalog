@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import SiteHeader from '$/components/SiteHeader';
 import { AppRoutes } from '$/router/routes';
-import AppDetail from '$/views/AppDetail';
 import AppList from '$/views/AppList';
 import './Layout.scss';
 
 export function Layout(): JSX.Element {
+  // Lazy load AppDetail component since AppList is the default screen.
+  const AppDetail = lazy(() => import('$/views/AppDetail'));
+
   return (
     <article className="layout">
       <SiteHeader />
