@@ -219,12 +219,12 @@ exports[`<App /> should render app list filtered by author 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 ReadMe Available
               </span>
@@ -263,12 +263,12 @@ exports[`<App /> should render app list filtered by author 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 ReadMe Available
               </span>
@@ -307,12 +307,12 @@ exports[`<App /> should render app list filtered by author 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--unavailable"
+                class="ac-chip ac-chip--unavailable"
               >
                 ReadMe Unavailable
               </span>
@@ -351,12 +351,12 @@ exports[`<App /> should render app list filtered by author 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 ReadMe Available
               </span>
@@ -395,12 +395,12 @@ exports[`<App /> should render app list filtered by author 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 ReadMe Available
               </span>
@@ -439,12 +439,12 @@ exports[`<App /> should render app list filtered by author 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--unavailable"
+                class="ac-chip ac-chip--unavailable"
               >
                 ReadMe Unavailable
               </span>
@@ -483,12 +483,12 @@ exports[`<App /> should render app list filtered by author 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--unavailable"
+                class="ac-chip ac-chip--unavailable"
               >
                 ReadMe Unavailable
               </span>
@@ -527,12 +527,12 @@ exports[`<App /> should render app list filtered by author 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--unavailable"
+                class="ac-chip ac-chip--unavailable"
               >
                 ReadMe Unavailable
               </span>
@@ -767,12 +767,12 @@ exports[`<App /> should render list of apps on load 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 ReadMe Available
               </span>
@@ -811,12 +811,12 @@ exports[`<App /> should render list of apps on load 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 ReadMe Available
               </span>
@@ -855,12 +855,12 @@ exports[`<App /> should render list of apps on load 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--unavailable"
+                class="ac-chip ac-chip--unavailable"
               >
                 ReadMe Unavailable
               </span>
@@ -899,12 +899,12 @@ exports[`<App /> should render list of apps on load 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 ReadMe Available
               </span>
@@ -943,12 +943,12 @@ exports[`<App /> should render list of apps on load 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 ReadMe Available
               </span>
@@ -987,12 +987,12 @@ exports[`<App /> should render list of apps on load 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--unavailable"
+                class="ac-chip ac-chip--unavailable"
               >
                 ReadMe Unavailable
               </span>
@@ -1031,12 +1031,12 @@ exports[`<App /> should render list of apps on load 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--unavailable"
+                class="ac-chip ac-chip--unavailable"
               >
                 ReadMe Unavailable
               </span>
@@ -1075,12 +1075,12 @@ exports[`<App /> should render list of apps on load 1`] = `
               class="ac-tile__chips"
             >
               <span
-                class="chip chip--available"
+                class="ac-chip ac-chip--available"
               >
                 URL available
               </span>
               <span
-                class="chip chip--unavailable"
+                class="ac-chip ac-chip--unavailable"
               >
                 ReadMe Unavailable
               </span>
