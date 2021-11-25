@@ -50,6 +50,9 @@ Please find the documentation specific to the apps inside the app ReadMe linked 
 - [lib-utils](packages/frontend/lib-utils/README.md)
 - [ui-app-catalog](packages/frontend/ui-app-catalog/README.md)
 
+Documentation about application ideation and wireframes for Figma can be found under:
+- [app-ideation](app-ideation/README.md)
+
 ### Workspace Structure
 
 This application follows a monorepo approach. The following sections explains the folder structure:
@@ -79,3 +82,7 @@ This application follows a monorepo approach. The following sections explains th
 ### Application Architecture:
 
 ![img.png](img.png)
+
+### Application Screenshots:
+
+Please find the application screenshots [here](/screenshots)
