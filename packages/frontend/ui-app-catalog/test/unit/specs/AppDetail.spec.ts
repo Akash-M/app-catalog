@@ -57,7 +57,7 @@ describe('<App />', () => {
     (getAppById as jest.Mock).mockResolvedValueOnce(appListFixtures[0]);
     (getApps as jest.Mock).mockResolvedValueOnce(appListFixtures);
     (getAppReadme as jest.Mock).mockRejectedValueOnce('mock-error');
-    const { container } = customRenderer(App, initializeState);
+    customRenderer(App, initializeState);
     await waitFor(() => expect(getApps as jest.Mock).toHaveBeenCalledTimes(1));
     fireEvent.click(screen.getByText('prometheus-operator-app-chart'));
     await waitFor(() => {
@@ -65,7 +65,6 @@ describe('<App />', () => {
       expect(getApps as jest.Mock).toHaveBeenCalledTimes(1);
       expect(getAppReadme as jest.Mock).toHaveBeenCalledTimes(1);
     });
-    expect(container.firstChild).toMatchSnapshot();
     await waitFor(() => {
       expect(screen.getByText('AppDetail.error.readme')).toBeTruthy();
     });
@@ -75,7 +74,7 @@ describe('<App />', () => {
     (getAppById as jest.Mock).mockRejectedValueOnce('mock-error');
     (getApps as jest.Mock).mockResolvedValueOnce(appListFixtures);
     (getAppReadme as jest.Mock).mockResolvedValueOnce('mock-read-me');
-    const { container } = customRenderer(App, initializeState);
+    customRenderer(App, initializeState);
     await waitFor(() =>
       expect(getApps as jest.Mock).toHaveBeenCalledTimes(1));
     fireEvent.click(screen.getByText('prometheus-operator-app-chart'));
@@ -83,7 +82,6 @@ describe('<App />', () => {
       expect(getAppById as jest.Mock).toHaveBeenCalledTimes(1);
       expect(getApps as jest.Mock).toHaveBeenCalledTimes(1);
     });
-    expect(container.firstChild).toMatchSnapshot();
     await waitFor(() => {
       expect(screen.getByText('AppDetail.error.appFetch')).toBeTruthy();
     });
