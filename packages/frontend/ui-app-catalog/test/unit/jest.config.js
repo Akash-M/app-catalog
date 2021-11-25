@@ -4,7 +4,7 @@ module.exports = Object.assign({}, require('../../jest.config'), {
     global: {
       statements: 88,
       branches: 72,
-      functions: 84,
+      functions: 81,
       lines: 88,
     },
   },
