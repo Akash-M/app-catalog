@@ -39,6 +39,7 @@ I would work on the following aspects:
 
 ### Features: 
 Some additional features which would be nice to have in the future:
+- add translations for German and allow users to switch language dynamically
 - setup theme toggle between light and dark mode
 - add more filters in the app-list screen such as sorting by name, author, repos which have urls and readmes.
 - implement pagination/lazy loading of components and application list to deal with large payload (Needs updates
