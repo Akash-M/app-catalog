@@ -29,10 +29,16 @@ Upgrade dependencies:
 npx yarn-upgrade-all
 ```
 
-Start the frontend
+Start `ui-app-catalog` app
 
 ```sh
 yarn start:frontend
+```
+
+Start `lib-components` app
+
+```sh
+yarn start:storybook
 ```
 
 ### Further documentation:
