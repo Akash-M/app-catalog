@@ -29,5 +29,7 @@ jobs:
         run: yarn install
       - name: Run linter
         run: yarn workspace ui-app-catalog lint
+      - name: Run test:unit
+        run: yarn workspace ui-app-catalog test:unit
       - name: Run build
         run: yarn workspace ui-app-catalog build

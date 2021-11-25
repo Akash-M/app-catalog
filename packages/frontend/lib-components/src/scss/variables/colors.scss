@@ -1,33 +1,27 @@
 // Base color definitions
-// black
+
+// Note: Use `ac` prefix for color names which can clash with default colors.
+
+// black shades
 $ac-black: #000;
-$ac-copy: #2b3547;
+$ac-black-1: rgba(0, 0, 0, 0.15);
+$ac-black-2: rgba(0, 0, 0, 0.05);
+$ac-black-3: #2b3547;
+$ac-black-4: rgba(37, 45, 61, 0.8);
 
-// accent
-$ac-accent-color: #007487;
-
-// grey
-$ac-grey: #eaeaec;
+// white/grey shades
 $ac-white: #fff;
+$ac-grey: #eaeaec;
+$ac-grey-1: #f3f3f3;
+$ac-grey-2: #fafafa;
+$ac-grey-3: #737373;
+$ac-grey-4: rgba(187, 199, 222, 0.8);
 
-// Box shadows
-// TODO: rename this to border.
-$ac-box-shadow: rgba(0, 0, 0, 0.15);
-$ac-box-shadow-2: rgba(0, 0, 0, 0.05);
+// blue shades
+$ac-blue: #00437a;
 
-// Tile colors
-$titanium-white: #f3f3f3;
-$ac-grey-0: $titanium-white;
-$ac-tile-background: #fafafa;
-$ac-tile-background-hover: $ac-grey-0;
-
-$ac-blue: #1e3a63; // Primary
-$ac-theme-accent: $ac-blue;
-$graphite: #737373;
-$ac-grey-1: $graphite;
-
-$ac-text-secondary-dark: rgba(187, 199, 222, 0.8);
-
+// green shades
 $ac-green: #54c6a0;
 
-$ac-coralle: #ea5e5d;
+// red shades
+$ac-red: #ea5e5d;

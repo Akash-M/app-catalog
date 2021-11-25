@@ -1,4 +1,5 @@
 declare namespace AppCatalog {
+  // TODO: rename this.
   export interface Catalog {
     id: string;
     name: string;
