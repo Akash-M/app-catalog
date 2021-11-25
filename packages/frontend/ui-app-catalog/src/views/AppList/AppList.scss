@@ -3,10 +3,18 @@
     display: flex;
     flex-flow: row wrap;
     margin-bottom: pxToRem(16);
-    margin-left: pxToRem(16);
+    margin-left: 0;
+
+    @include tablet {
+      margin-left: pxToRem(16);
+    }
 
     > .filter {
-      width: 350px;
+      width: 100%;
+
+      @include tablet {
+        width: 350px;
+      }
     }
   }
 
@@ -15,7 +23,11 @@
     flex-flow: row wrap;
 
     > .ac-tile {
-      margin: pxToRem(16);
+      margin-bottom: pxToRem(16);
+
+      @include tablet {
+        margin: pxToRem(16);
+      }
     }
   }
 }

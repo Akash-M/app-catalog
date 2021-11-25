@@ -11,19 +11,37 @@
       margin-bottom: pxToRem(32);
 
       > div {
-        align-items: center;
+        align-items: flex-start;
         border-bottom: 1px solid $ac-black-2;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         padding: 0 1rem;
+
+        @include tablet {
+          align-items: center;
+          flex-direction: row;
+        }
 
         > h4 {
           color: $ac-black-3;
+          margin-bottom: pxToRem(8);
           width: 100px;
+
+          @include tablet {
+            margin: pxToRem(16);
+          }
         }
 
         &:last-child {
           border-bottom: none;
+        }
+
+        > p {
+          margin: 0 0 pxToRem(8) 0;
+
+          @include tablet {
+            margin: pxToRem(16);
+          }
         }
       }
     }
