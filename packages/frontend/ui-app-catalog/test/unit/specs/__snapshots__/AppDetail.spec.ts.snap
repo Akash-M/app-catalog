@@ -301,7 +301,7 @@ exports[`<App /> should display toast message in case of an error when fetching 
     >
       <div
         class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error Toastify--animate Toastify__bounce-enter--bottom-right"
-        id="mku0uc5e6"
+        id="41zgm7ppi"
       >
         <div
           class="Toastify__toast-body"
