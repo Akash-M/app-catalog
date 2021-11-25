@@ -68,16 +68,19 @@ export function AppDetail(): JSX.Element {
               </div>
 
               <div>
-                <h4>{t('AppDetail.details.version')}</h4> <p>{appDetail.version}</p>
+                <h4>{t('AppDetail.details.version')}</h4>{' '}
+                <p>{appDetail.version}</p>
               </div>
 
               <div>
-                <h4>{t('AppDetail.details.description')}</h4> <p>{appDetail.description}</p>
+                <h4>{t('AppDetail.details.description')}</h4>{' '}
+                <p>{appDetail.description}</p>
               </div>
 
               {appDetail.author && (
                 <div>
-                  <h4>{t('AppDetail.details.author')}</h4> <p>{appDetail.author}</p>
+                  <h4>{t('AppDetail.details.author')}</h4>{' '}
+                  <p>{appDetail.author}</p>
                 </div>
               )}
 

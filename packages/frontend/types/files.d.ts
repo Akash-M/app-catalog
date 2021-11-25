@@ -7,4 +7,3 @@ declare module '*.yaml' {
 }
 
 declare module '*.svg';
-

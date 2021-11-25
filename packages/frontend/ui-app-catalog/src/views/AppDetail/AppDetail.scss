@@ -1,8 +1,8 @@
 .app-detail {
   > button {
     align-items: center;
-    border: none;
     background: none;
+    border: none;
     color: $ac-blue;
     cursor: pointer;
     display: flex;
@@ -53,7 +53,8 @@
           border-bottom: none;
         }
 
-        > p, a {
+        > p,
+        a {
           margin: 0 0 pxToRem(8) 0;
 
           @include tablet {

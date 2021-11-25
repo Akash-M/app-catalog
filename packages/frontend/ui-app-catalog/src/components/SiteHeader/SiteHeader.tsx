@@ -38,7 +38,7 @@ export function SiteHeader(): JSX.Element {
       </NavLink>
 
       <Select
-        ref={ref => setSearchRef(ref)}
+        ref={(ref) => setSearchRef(ref)}
         className="site-header__search"
         options={appList}
         placeholder={'Search'}
