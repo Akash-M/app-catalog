@@ -64,4 +64,4 @@ This application follows a monorepo approach. The following sections explains th
 
 ### Application Architecture:
 
-// TODO: Add application architecture diagram.
+![img.png](img.png)
