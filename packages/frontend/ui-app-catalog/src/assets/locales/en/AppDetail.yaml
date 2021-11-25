@@ -1,1 +1,9 @@
 header: App Detail
+backButton: Back to App List
+details:
+  id: ID
+  version: Version
+  description: Description
+  author: Author
+  url: URL
+  readme: ReadMe

@@ -6,9 +6,7 @@
   flex-direction: column;
   height: fit-content;
   justify-content: flex-start;
-  padding: 1rem 1.5rem;
-  position: relative;
-  width: auto;
+  padding: 0 1rem;
   z-index: map-get($zindex, header);
 
   @include tablet {
@@ -24,9 +22,11 @@
   }
 
   &__search {
+    margin-bottom: pxToRem(16);
     width: 100%;
 
     @include tablet {
+      margin-bottom: 0;
       width: 250px;
     }
   }

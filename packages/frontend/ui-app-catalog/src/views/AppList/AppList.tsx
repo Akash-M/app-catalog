@@ -22,7 +22,6 @@ export function AppList(): JSX.Element {
   const handleAuthorSelect = (
     items: MultiValue<{ label: string | undefined; value: string | undefined }>,
   ) => {
-    console.info('INSIDE');
     if (items.length === 0) {
       setVisibleAppList(appList);
       return;

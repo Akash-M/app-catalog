@@ -1,4 +1,21 @@
 .app-detail {
+  > button {
+    align-items: center;
+    border: none;
+    background: none;
+    color: $ac-blue;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-size: pxToRem(16);
+    font-weight: bold;
+    padding: 0;
+
+    > img {
+      margin-right: pxToRem(8);
+    }
+  }
+
   > section {
     > img {
       margin-bottom: pxToRem(32);
@@ -36,7 +53,7 @@
           border-bottom: none;
         }
 
-        > p {
+        > p, a {
           margin: 0 0 pxToRem(8) 0;
 
           @include tablet {
@@ -45,13 +62,13 @@
         }
       }
     }
+  }
 
-    > .readme {
-      background-color: $ac-grey-2;
-      border-radius: pxToRem(16);
-      cursor: not-allowed;
-      padding: 1.5rem 1rem;
-      pointer-events: none;
-    }
+  > .readme {
+    background-color: $ac-grey-2;
+    border-radius: pxToRem(16);
+    cursor: not-allowed;
+    padding: 1rem;
+    pointer-events: none;
   }
 }

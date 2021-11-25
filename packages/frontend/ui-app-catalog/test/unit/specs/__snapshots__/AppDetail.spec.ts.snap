@@ -99,6 +99,13 @@ exports[`<App /> should render app detail based on url param 1`] = `
       <article
         class="app-detail"
       >
+        <button>
+          <img
+            alt="left-arrow"
+            src="assets/images/arrow-left.svg"
+          />
+          AppDetail.backButton
+        </button>
         <section>
           <h2>
             prometheus-operator-app-chart
@@ -113,7 +120,7 @@ exports[`<App /> should render app detail based on url param 1`] = `
           >
             <div>
               <h4>
-                ID
+                AppDetail.details.id
               </h4>
                
               <p>
@@ -122,7 +129,7 @@ exports[`<App /> should render app detail based on url param 1`] = `
             </div>
             <div>
               <h4>
-                Version
+                AppDetail.details.version
               </h4>
                
               <p>
@@ -131,7 +138,7 @@ exports[`<App /> should render app detail based on url param 1`] = `
             </div>
             <div>
               <h4>
-                Description
+                AppDetail.details.description
               </h4>
                
               <p>
@@ -140,7 +147,7 @@ exports[`<App /> should render app detail based on url param 1`] = `
             </div>
             <div>
               <h4>
-                Author
+                AppDetail.details.author
               </h4>
                
               <p>
@@ -149,7 +156,7 @@ exports[`<App /> should render app detail based on url param 1`] = `
             </div>
             <div>
               <h4>
-                URL
+                AppDetail.details.url
               </h4>
               <a
                 href="https://github.com/giantswarm/prometheus-operator-app"
@@ -160,13 +167,16 @@ exports[`<App /> should render app detail based on url param 1`] = `
               </a>
             </div>
           </div>
-          <div
-            class="readme"
-          >
-            <p>
-              mock-read-me
-            </p>
-          </div>
+        </section>
+        <section
+          class="readme"
+        >
+          <h4>
+            AppDetail.details.readme
+          </h4>
+          <p>
+            mock-read-me
+          </p>
         </section>
       </article>
     </section>
