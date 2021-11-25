@@ -33,8 +33,6 @@ The approach to the development of this repository was done in the following man
 ### Step 7: 
 - Presentation and feedback.
 
-
-
 ## Future Improvements:
 Like any software, there is scope for a lot of improvement. If I had to spend more time working on this project,
 I would work on the following aspects:
@@ -52,9 +50,10 @@ Some additional features which would be nice to have in the future:
   - sharing types with the backend to ensure more project wide type safety.
   - speeds up local development since all the code is in one place
   - share dependencies between backend and frontend and easier to upgrade common dependencies
-  - Create custom components in place of using `react-select`. Removing external dependencies helps to manage app bundle
-    sizes, allows to customize components based on designs and is also more secure since the dependency trees
-    don't grow too much.
+- Create custom components in place of using `react-select`. Removing external dependencies helps to manage app bundle
+  sizes, allows to customize components based on designs and is also more secure since the dependency trees
+  don't grow too much.
+- Error handling can be improved especially for cases when api calls fail. 
 
 
 ## Note:

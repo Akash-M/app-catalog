@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import { getAppById, getAppReadme } from 'lib-api/src/catalog';
 
@@ -9,34 +10,37 @@ import ArrowLeftIcon from '$/assets/images/arrow-left.svg';
 import './AppDetail.scss';
 
 export function AppDetail(): JSX.Element {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t } = useTranslation(['Global', 'AppDetail']);
   const navigate = useNavigate();
   const { id } = useParams();
   const [appDetail, setAppDetail] = useState<Catalog.App>();
   const [appReadme, setAppReadme] = useState<string>('');
-  // TODO: specify error types.
-  const [error, setError] = useState(false);
+
+  const fetchAppReadme = async () => {
+    if (appDetail?.readmeURL) {
+      try {
+        setAppReadme(await getAppReadme(appDetail.readmeURL));
+      } catch {
+        toast.error(t('AddConsent.success'), {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
+      }
+    }
+  };
 
   const fetchAppDetail = async () => {
-    try {
-      if (id) {
-        const response = await getAppById(id);
-        setAppDetail(response);
-        if (response.readmeURL) {
-          setAppReadme(await getAppReadme(response.readmeURL));
-        }
-      } else {
-        setError(true);
-      }
-    } catch {
-      setError(true);
+    if (id) {
+      setAppDetail(await getAppById(id));
     }
   };
 
   useEffect(() => {
     void fetchAppDetail();
   }, [id]);
+
+  useEffect(() => {
+    void fetchAppReadme();
+  }, [appDetail]);
 
   return (
     <article className="app-detail">
@@ -45,7 +49,7 @@ export function AppDetail(): JSX.Element {
         {t('AppDetail.backButton')}
       </button>
 
-      {appDetail && !error && (
+      {appDetail && (
         <>
           <section>
             <h2>{appDetail.name}</h2>
