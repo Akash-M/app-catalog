@@ -7,3 +7,6 @@ details:
   author: Author
   url: URL
   readme: ReadMe
+error:
+  appFetch: Error, failed to fetch app details. Please try again in some time.
+  readme: Error, failed to fetch readme.

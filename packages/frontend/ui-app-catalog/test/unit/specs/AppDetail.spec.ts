@@ -34,7 +34,8 @@ describe('<App />', () => {
 
   beforeEach(jest.clearAllMocks);
 
-  test('should render app detail based on url param', async () => {
+  test('should render app detail based on url param and navigate back to app list' +
+    'on clicking back button', async () => {
     (getAppById as jest.Mock).mockResolvedValueOnce(appListFixtures[0]);
     (getApps as jest.Mock).mockResolvedValueOnce(appListFixtures);
     (getAppReadme as jest.Mock).mockResolvedValueOnce('mock-read-me');
@@ -43,9 +44,48 @@ describe('<App />', () => {
     fireEvent.click(screen.getByText('prometheus-operator-app-chart'));
     await waitFor(() => {
       expect(getAppById as jest.Mock).toHaveBeenCalledTimes(1);
+      expect(getApps as jest.Mock).toHaveBeenCalledTimes(1);
       expect(getAppReadme as jest.Mock).toHaveBeenCalledTimes(1);
     });
     expect(container.firstChild!.textContent).not.toContain(I18N_MISSING_KEY);
     expect(container.firstChild).toMatchSnapshot();
+    fireEvent.click(screen.getByText('AppDetail.backButton'));
+    expect(screen.getByText('AppList.header')).toBeTruthy();
+  });
+
+  test('should display toast message in case of an error when fetching readme', async () => {
+    (getAppById as jest.Mock).mockResolvedValueOnce(appListFixtures[0]);
+    (getApps as jest.Mock).mockResolvedValueOnce(appListFixtures);
+    (getAppReadme as jest.Mock).mockRejectedValueOnce('mock-error');
+    const { container } = customRenderer(App, initializeState);
+    await waitFor(() => expect(getApps as jest.Mock).toHaveBeenCalledTimes(1));
+    fireEvent.click(screen.getByText('prometheus-operator-app-chart'));
+    await waitFor(() => {
+      expect(getAppById as jest.Mock).toHaveBeenCalledTimes(1);
+      expect(getApps as jest.Mock).toHaveBeenCalledTimes(1);
+      expect(getAppReadme as jest.Mock).toHaveBeenCalledTimes(1);
+    });
+    expect(container.firstChild).toMatchSnapshot();
+    await waitFor(() => {
+      expect(screen.getByText('AppDetail.error.readme')).toBeTruthy();
+    });
+  });
+
+  test('should display toast message in case of an error when fetching app details', async () => {
+    (getAppById as jest.Mock).mockRejectedValueOnce('mock-error');
+    (getApps as jest.Mock).mockResolvedValueOnce(appListFixtures);
+    (getAppReadme as jest.Mock).mockResolvedValueOnce('mock-read-me');
+    const { container } = customRenderer(App, initializeState);
+    await waitFor(() =>
+      expect(getApps as jest.Mock).toHaveBeenCalledTimes(1));
+    fireEvent.click(screen.getByText('prometheus-operator-app-chart'));
+    await waitFor(() => {
+      expect(getAppById as jest.Mock).toHaveBeenCalledTimes(1);
+      expect(getApps as jest.Mock).toHaveBeenCalledTimes(1);
+    });
+    expect(container.firstChild).toMatchSnapshot();
+    await waitFor(() => {
+      expect(screen.getByText('AppDetail.error.appFetch')).toBeTruthy();
+    });
   });
 });

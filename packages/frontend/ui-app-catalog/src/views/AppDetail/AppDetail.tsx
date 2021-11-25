@@ -21,7 +21,7 @@ export function AppDetail(): JSX.Element {
       try {
         setAppReadme(await getAppReadme(appDetail.readmeURL));
       } catch {
-        toast.error(t('AddConsent.success'), {
+        toast.error(t('AppDetail.error.readme'), {
           position: toast.POSITION.BOTTOM_RIGHT,
         });
       }
@@ -29,8 +29,15 @@ export function AppDetail(): JSX.Element {
   };
 
   const fetchAppDetail = async () => {
+    /* istanbul ignore else */
     if (id) {
-      setAppDetail(await getAppById(id));
+      try {
+        setAppDetail(await getAppById(id));
+      } catch {
+        toast.error(t('AppDetail.error.appFetch'), {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
+      }
     }
   };
 
