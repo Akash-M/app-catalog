@@ -22,6 +22,7 @@ export function AppList(): JSX.Element {
   const handleAuthorSelect = (
     items: MultiValue<{ label: string | undefined; value: string | undefined }>,
   ) => {
+    console.info('INSIDE');
     if (items.length === 0) {
       setVisibleAppList(appList);
       return;
@@ -47,7 +48,10 @@ export function AppList(): JSX.Element {
           className="filter"
           options={authorList}
           placeholder={'Filter by Author'}
-          onChange={handleAuthorSelect}
+          onChange={(e) => {
+            console.info(e);
+            handleAuthorSelect(e);
+          }}
         />
       </section>
 

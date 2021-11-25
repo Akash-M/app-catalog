@@ -1,4 +1,4 @@
-import { waitFor } from '@testing-library/react';
+import { act, fireEvent, screen, waitFor } from '@testing-library/react';
 import { setI18n } from 'react-i18next';
 
 import { getApps } from 'lib-api/src/catalog';
@@ -32,5 +32,23 @@ describe('<App />', () => {
     await waitFor(() => expect(getApps as jest.Mock).toHaveBeenCalledTimes(1));
     expect(container.firstChild!.textContent).not.toContain(I18N_MISSING_KEY);
     expect(container.firstChild).toMatchSnapshot();
+    expect(container.querySelectorAll('.ac-tile').length).toBe(8);
+  });
+
+  test('should render app list filtered by author', async () => {
+    (getApps as jest.Mock).mockResolvedValueOnce(appListFixtures);
+    const { container } = customRenderer(App, initializeState);
+    await waitFor(() => expect(getApps as jest.Mock).toHaveBeenCalledTimes(1));
+    const inputs = screen.getAllByRole('combobox');
+    await waitFor(() => {
+      act(() => {
+        // FIXME: not working.
+        fireEvent.keyDown(inputs[1],
+          { label: "GiantSwarm", value: "GiantSwarm" }
+        );
+      });
+    });
+    expect(container.firstChild).toMatchSnapshot();
+    expect(container.querySelectorAll('.ac-tile').length).toBe(4);
   });
 });

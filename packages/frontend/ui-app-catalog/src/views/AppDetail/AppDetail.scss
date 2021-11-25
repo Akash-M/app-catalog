@@ -6,19 +6,19 @@
     }
 
     > .info {
-      background-color: $ac-tile-background;
+      background-color: $ac-grey-2;
       border-radius: pxToRem(16);
       margin-bottom: pxToRem(32);
 
       > div {
         align-items: center;
-        border-bottom: 1px solid $ac-box-shadow-2;
+        border-bottom: 1px solid $ac-black-2;
         display: flex;
         flex-direction: row;
         padding: 0 1rem;
 
         > h4 {
-          color: $ac-copy;
+          color: $ac-black-3;
           width: 100px;
         }
 
@@ -29,7 +29,7 @@
     }
 
     > .readme {
-      background-color: $ac-tile-background;
+      background-color: $ac-grey-2;
       border-radius: pxToRem(16);
       cursor: not-allowed;
       padding: 1.5rem 1rem;

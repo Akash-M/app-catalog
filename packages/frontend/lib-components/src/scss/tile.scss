@@ -1,6 +1,6 @@
 .ac-tile {
   align-items: flex-start;
-  background-color: $ac-tile-background;
+  background-color: $ac-grey-2;
   border-radius: pxToRem(16);
   cursor: pointer;
   display: flex;
@@ -13,11 +13,11 @@
   word-break: break-word;
 
   &:hover {
-    background-color: $ac-tile-background-hover;
+    background-color: $ac-grey-1;
   }
 
   &:hover .title {
-    color: $ac-theme-accent;
+    color: $ac-blue;
   }
 
   &__header {
@@ -39,7 +39,7 @@
   }
 
   &__details {
-    color: $ac-grey-1;
+    color: $ac-black-4;
     display: flex;
     flex-direction: column;
     font-size: pxToRem(14);
@@ -74,7 +74,7 @@
       }
 
       &--unavailable {
-        background: $ac-coralle;
+        background: $ac-red;
       }
     }
   }

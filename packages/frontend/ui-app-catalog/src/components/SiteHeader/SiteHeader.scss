@@ -1,7 +1,7 @@
 .site-header {
   align-items: center;
   background-color: $ac-white;
-  box-shadow: 0 0 0.25em $ac-box-shadow;
+  box-shadow: 0 0 0.25em $ac-black-1;
   display: flex;
   flex-direction: row;
   height: fit-content;
@@ -12,7 +12,7 @@
   z-index: map-get($zindex, header);
 
   > a {
-    color: $ac-accent-color;
+    color: $ac-blue;
     font-size: pxToRem(16);
     text-decoration: none;
   }
