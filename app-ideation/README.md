@@ -43,6 +43,8 @@ Some additional features which would be nice to have in the future:
 - add more filters in the app-list screen such as sorting by name, author, repos which have urls and readmes.
 - implement pagination/lazy loading of components and application list to deal with large payload (Needs updates
   on the backend side as well.
+- a default loader component (something like a spinner) should be added as fallback for Suspense when lazy loading
+  React components.
 
 ### Technical Improvements:
 - Create a `backend` folder inside `packages` and migrate the backend project into this repo. Would bring some benefits
