@@ -5,7 +5,7 @@ import { appCatalogApi, externalApi } from './axios';
  *
  * @return Promise<AppCatalog.Catalog[]>
  */
-export async function getApps(): Promise<AppCatalog.Catalog[]> {
+export async function getApps(): Promise<Catalog.App[]> {
   return (await appCatalogApi.get('/apps')).data;
 }
 
@@ -15,7 +15,7 @@ export async function getApps(): Promise<AppCatalog.Catalog[]> {
  * @param id: App id to be used to fetch detailed information.
  * @return Promise<AppCatalog.Catalog>
  */
-export async function getAppById(id: string): Promise<AppCatalog.Catalog> {
+export async function getAppById(id: string): Promise<Catalog.App> {
   return (await appCatalogApi.get(`/apps/${id}`)).data;
 }
 

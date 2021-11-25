@@ -19,7 +19,7 @@
     "build": "echo 'no build process required'",
     "lint:prettier": "prettier --write \"./**/*.{js,jsx,json}\"",
     "lint:ts": "run exec:eslint --cache-file $(pwd)/.eslintcache $(pwd)",
-    "lint": "echo 'no lint process required for the moment'",
+    "lint": "yarn lint:ts && yarn prettier",
     "prettier": "prettier -c \"src/**/*.{js,ts,tsx}\"",
     "test:unit": "jest --config test/unit/jest.config.js --coverage",
     "test:unit:update": "yarn test:unit -u",

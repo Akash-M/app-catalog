@@ -1,4 +1,4 @@
-export const appListFixtures: AppCatalog.Catalog[] = [
+export const appListFixtures: Catalog.App[] = [
   {
     id: 'asdm123312asdnboqwedsa',
     name: 'prometheus-operator-app-chart',

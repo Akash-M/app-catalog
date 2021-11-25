@@ -1,35 +1,43 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import { getAppById, getAppReadme } from 'lib-api/src/catalog';
 
+import ArrowLeftIcon from '$/assets/images/arrow-left.svg';
 import './AppDetail.scss';
 
 export function AppDetail(): JSX.Element {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t } = useTranslation(['Global', 'AppDetail']);
-  // TODO: fix type.
-  const { id } = useParams<any>();
-  const [appDetail, setAppDetail] = useState<AppCatalog.Catalog>();
+  const navigate = useNavigate();
+  const { id } = useParams();
+  const [appDetail, setAppDetail] = useState<Catalog.App>();
   const [appReadme, setAppReadme] = useState<string>('');
-  // TODO: specify error types.
-  const [error, setError] = useState(false);
+
+  const fetchAppReadme = async () => {
+    if (appDetail?.readmeURL) {
+      try {
+        setAppReadme(await getAppReadme(appDetail.readmeURL));
+      } catch {
+        toast.error(t('AppDetail.error.readme'), {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
+      }
+    }
+  };
 
   const fetchAppDetail = async () => {
-    try {
-      if (id) {
-        const response = await getAppById(id);
-        setAppDetail(response);
-        if (response.readmeURL) {
-          setAppReadme(await getAppReadme(response.readmeURL));
-        }
-      } else {
-        setError(true);
+    /* istanbul ignore else */
+    if (id) {
+      try {
+        setAppDetail(await getAppById(id));
+      } catch {
+        toast.error(t('AppDetail.error.appFetch'), {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
       }
-    } catch {
-      setError(true);
     }
   };
 
@@ -37,53 +45,71 @@ export function AppDetail(): JSX.Element {
     void fetchAppDetail();
   }, [id]);
 
+  useEffect(() => {
+    void fetchAppReadme();
+  }, [appDetail]);
+
   return (
     <article className="app-detail">
-      {appDetail && !error && (
-        <section>
-          <h2>{appDetail.name}</h2>
+      <button onClick={() => navigate(-1)}>
+        <img alt="left-arrow" src={ArrowLeftIcon} />
+        {t('AppDetail.backButton')}
+      </button>
 
-          {appDetail.iconURL && (
-            <img
-              alt={appDetail.iconURL}
-              className="icon"
-              src={appDetail.iconURL}
-            />
-          )}
+      {appDetail && (
+        <>
+          <section>
+            <h2>{appDetail.name}</h2>
 
-          <div className="info">
-            <div>
-              <h4>ID</h4> <p>{appDetail.id}</p>
-            </div>
-
-            <div>
-              <h4>Version</h4> <p>{appDetail.version}</p>
-            </div>
-
-            <div>
-              <h4>Description</h4> <p>{appDetail.description}</p>
-            </div>
-
-            {appDetail.author && (
-              <div>
-                <h4>Author</h4> <p>{appDetail.author}</p>
-              </div>
+            {appDetail.iconURL && (
+              <img
+                alt={appDetail.iconURL}
+                className="icon"
+                src={appDetail.iconURL}
+              />
             )}
 
-            {appDetail.url && (
+            <div className="info">
               <div>
-                <h4>URL</h4>
-                <a href={appDetail.url} rel="noreferrer" target="_blank">
-                  {appDetail.url}
-                </a>
+                <h4>{t('AppDetail.details.id')}</h4> <p>{appDetail.id}</p>
               </div>
-            )}
-          </div>
+
+              <div>
+                <h4>{t('AppDetail.details.version')}</h4>{' '}
+                <p>{appDetail.version}</p>
+              </div>
+
+              <div>
+                <h4>{t('AppDetail.details.description')}</h4>{' '}
+                <p>{appDetail.description}</p>
+              </div>
+
+              {appDetail.author && (
+                <div>
+                  <h4>{t('AppDetail.details.author')}</h4>{' '}
+                  <p>{appDetail.author}</p>
+                </div>
+              )}
+
+              {appDetail.url && (
+                <div>
+                  <h4>{t('AppDetail.details.url')}</h4>
+                  <a href={appDetail.url} rel="noreferrer" target="_blank">
+                    {appDetail.url}
+                  </a>
+                </div>
+              )}
+            </div>
+          </section>
 
           {appDetail.readmeURL && (
-            <ReactMarkdown className="readme">{appReadme}</ReactMarkdown>
+            <section className="readme">
+              <h4>{t('AppDetail.details.readme')}</h4>
+
+              <ReactMarkdown>{appReadme}</ReactMarkdown>
+            </section>
           )}
-        </section>
+        </>
       )}
     </article>
   );

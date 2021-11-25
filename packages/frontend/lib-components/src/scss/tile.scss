@@ -9,8 +9,12 @@
   min-height: 200px;
   padding: 1.5rem 1rem;
   position: relative;
-  width: 350px;
+  width: 100%;
   word-break: break-word;
+
+  @include tablet {
+    width: 350px;
+  }
 
   &:hover {
     background-color: $ac-grey-1;
@@ -44,6 +48,7 @@
     flex-direction: column;
     font-size: pxToRem(14);
     line-height: pxToRem(20);
+    margin-bottom: pxToRem(16);
 
     > p {
       margin-bottom: pxToRem(8);
@@ -51,11 +56,8 @@
   }
 
   &__chips {
-    bottom: pxToRem(16);
     display: flex;
     flex-flow: row wrap;
-    margin-bottom: 0;
-    position: absolute;
     width: 100%;
   }
 }

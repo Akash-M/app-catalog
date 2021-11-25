@@ -12,9 +12,7 @@ import './AppList.scss';
 export function AppList(): JSX.Element {
   const { t } = useTranslation(['Global', 'AppList']);
   const navigate = useNavigate();
-  const [visibleAppList, setVisibleAppList] = useState<AppCatalog.Catalog[]>(
-    [],
-  );
+  const [visibleAppList, setVisibleAppList] = useState<Catalog.App[]>([]);
 
   const appList = useRecoilValue(AppListState);
   const authorList = useRecoilValue(AppAuthorSelector);
@@ -22,7 +20,6 @@ export function AppList(): JSX.Element {
   const handleAuthorSelect = (
     items: MultiValue<{ label: string | undefined; value: string | undefined }>,
   ) => {
-    console.info('INSIDE');
     if (items.length === 0) {
       setVisibleAppList(appList);
       return;
@@ -48,10 +45,7 @@ export function AppList(): JSX.Element {
           className="filter"
           options={authorList}
           placeholder={'Filter by Author'}
-          onChange={(e) => {
-            console.info(e);
-            handleAuthorSelect(e);
-          }}
+          onChange={(e) => handleAuthorSelect(e)}
         />
       </section>
 
@@ -63,7 +57,6 @@ export function AppList(): JSX.Element {
               <div
                 key={appIndex}
                 className="ac-tile"
-                // TODO: use AppRoutes enum.
                 onClick={() => navigate(`/app/${app.id}`)}
               >
                 <div className="ac-tile__header">

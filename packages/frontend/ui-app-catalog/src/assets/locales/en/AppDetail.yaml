@@ -1,1 +1,12 @@
 header: App Detail
+backButton: Back to App List
+details:
+  id: ID
+  version: Version
+  description: Description
+  author: Author
+  url: URL
+  readme: ReadMe
+error:
+  appFetch: Error, failed to fetch app details. Please try again in some time.
+  readme: Error, failed to fetch readme.

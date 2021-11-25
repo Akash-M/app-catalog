@@ -1,6 +1,5 @@
-declare namespace AppCatalog {
-  // TODO: rename this.
-  export interface Catalog {
+declare namespace Catalog {
+  export interface App {
     id: string;
     name: string;
     description: string;

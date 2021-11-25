@@ -51,6 +51,7 @@ Please find the documentation specific to the apps inside the app ReadMe linked 
 - [ui-app-catalog](packages/frontend/ui-app-catalog/README.md)
 
 Documentation about application ideation and wireframes for Figma can be found under:
+
 - [app-ideation](app-ideation/README.md)
 
 ### Workspace Structure

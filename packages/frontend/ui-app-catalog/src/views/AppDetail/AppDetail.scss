@@ -1,4 +1,21 @@
 .app-detail {
+  > button {
+    align-items: center;
+    background: none;
+    border: none;
+    color: $ac-blue;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-size: pxToRem(16);
+    font-weight: bold;
+    padding: 0;
+
+    > img {
+      margin-right: pxToRem(8);
+    }
+  }
+
   > section {
     > img {
       margin-bottom: pxToRem(32);
@@ -11,29 +28,48 @@
       margin-bottom: pxToRem(32);
 
       > div {
-        align-items: center;
+        align-items: flex-start;
         border-bottom: 1px solid $ac-black-2;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         padding: 0 1rem;
+
+        @include tablet {
+          align-items: center;
+          flex-direction: row;
+        }
 
         > h4 {
           color: $ac-black-3;
+          margin-bottom: pxToRem(8);
           width: 100px;
+
+          @include tablet {
+            margin: pxToRem(16);
+          }
         }
 
         &:last-child {
           border-bottom: none;
         }
+
+        > p,
+        a {
+          margin: 0 0 pxToRem(8) 0;
+
+          @include tablet {
+            margin: pxToRem(16);
+          }
+        }
       }
     }
+  }
 
-    > .readme {
-      background-color: $ac-grey-2;
-      border-radius: pxToRem(16);
-      cursor: not-allowed;
-      padding: 1.5rem 1rem;
-      pointer-events: none;
-    }
+  > .readme {
+    background-color: $ac-grey-2;
+    border-radius: pxToRem(16);
+    cursor: not-allowed;
+    padding: 1rem;
+    pointer-events: none;
   }
 }

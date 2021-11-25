@@ -2,10 +2,10 @@
 module.exports = Object.assign({}, require('../../jest.config'), {
   coverageThreshold: {
     global: {
-      statements: 88,
-      branches: 72,
-      functions: 81,
-      lines: 88,
+      statements: 93,
+      branches: 85,
+      functions: 88,
+      lines: 94,
     },
   },
 });

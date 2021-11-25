@@ -1,15 +1,19 @@
 .site-header {
-  align-items: center;
+  align-items: flex-start;
   background-color: $ac-white;
   box-shadow: 0 0 0.25em $ac-black-1;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: fit-content;
-  justify-content: space-between;
-  padding: 1rem 1.5rem;
-  position: relative;
-  width: auto;
+  justify-content: flex-start;
+  padding: 0 1rem;
   z-index: map-get($zindex, header);
+
+  @include tablet {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   > a {
     color: $ac-blue;
@@ -18,6 +22,12 @@
   }
 
   &__search {
-    width: 250px;
+    margin-bottom: pxToRem(16);
+    width: 100%;
+
+    @include tablet {
+      margin-bottom: 0;
+      width: 250px;
+    }
   }
 }

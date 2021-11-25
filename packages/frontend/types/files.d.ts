@@ -5,3 +5,5 @@ declare module '*.yaml' {
   };
   export default content;
 }
+
+declare module '*.svg';
