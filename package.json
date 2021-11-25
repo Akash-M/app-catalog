@@ -5,6 +5,9 @@
   "private": true,
   "scripts": {
     "exec:eslint": "eslint --cache",
+    "exec:prettier": "prettier",
+    "prettier": "yarn exec:prettier -c .",
+    "prettier:fix": "yarn exec:prettier -w .",
     "start:frontend": "yarn workspace ui-app-catalog start:dev"
   },
   "dependencies": {

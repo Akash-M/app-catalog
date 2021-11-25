@@ -3,11 +3,6 @@
   "compilerOptions": {
     "baseUrl": "."
   },
-  "include": [
-    ".",
-    "src",
-    "test",
-    "../lib-utils/src",
-  ],
+  "include": [".", "src", "test", "../lib-utils/src"],
   "sourceMap": true
 }

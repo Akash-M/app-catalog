@@ -1,19 +1,19 @@
 .ac-chip {
-	border-radius: pxToRem(16);
-	color: $ac-white;
-	font-size: pxToRem(12);
-	font-weight: bold;
-	padding: pxToRem(8);
+  border-radius: pxToRem(16);
+  color: $ac-white;
+  font-size: pxToRem(12);
+  font-weight: bold;
+  padding: pxToRem(8);
 
-	&:nth-child(2) {
-		margin-left: pxToRem(8);
-	}
+  &:nth-child(2) {
+    margin-left: pxToRem(8);
+  }
 
-	&--available {
-		background: $ac-green;
-	}
+  &--available {
+    background: $ac-green;
+  }
 
-	&--unavailable {
-		background: $ac-red;
-	}
+  &--unavailable {
+    background: $ac-red;
+  }
 }

@@ -82,7 +82,9 @@ export function AppList(): JSX.Element {
 
                 <div className="ac-tile__chips">
                   {app.url ? (
-                    <span className="ac-chip ac-chip--available">URL available</span>
+                    <span className="ac-chip ac-chip--available">
+                      URL available
+                    </span>
                   ) : (
                     <span className="ac-chip ac-chip--unavailable">
                       URL unavailable
