@@ -2,7 +2,7 @@
 
 Library of utility files relevant for the app catalog.
 
-// TODO: setup github actions badge
+[![lib-utils](https://github.com/Akash-M/app-catalog/actions/workflows/lib-utils-workflow.yaml/badge.svg)](https://github.com/Akash-M/app-catalog/actions/workflows/lib-utils-workflow.yaml)
 
 ### Testing philosophy
 

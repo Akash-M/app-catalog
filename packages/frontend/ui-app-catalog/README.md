@@ -2,7 +2,7 @@
 
 Catalog app written using React 17 with hooks and Typescript.
 
-// TODO: setup github actions badge
+[![ui-app-catalog](https://github.com/Akash-M/app-catalog/actions/workflows/ui-app-catalog-workflow.yaml/badge.svg)](https://github.com/Akash-M/app-catalog/actions/workflows/ui-app-catalog-workflow.yaml)
 
 ## Scripts
 

@@ -43,9 +43,10 @@ describe('<App />', () => {
     await waitFor(() => {
       act(() => {
         // FIXME: combobox input not registering.
-        fireEvent.keyDown(inputs[1],
-          { label: "GiantSwarm", value: "GiantSwarm" }
-        );
+        fireEvent.keyDown(inputs[1], {
+          label: 'GiantSwarm',
+          value: 'GiantSwarm',
+        });
       });
     });
     expect(container.firstChild).toMatchSnapshot();

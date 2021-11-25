@@ -5,7 +5,11 @@
   "private": true,
   "scripts": {
     "exec:eslint": "eslint --cache",
-    "start:frontend": "yarn workspace ui-app-catalog start:dev"
+    "exec:prettier": "prettier",
+    "prettier": "yarn exec:prettier -c .",
+    "prettier:fix": "yarn exec:prettier -w .",
+    "start:frontend": "yarn workspace ui-app-catalog start:dev",
+    "start:storybook": "yarn workspace lib-components start:dev"
   },
   "dependencies": {
     "@commitlint/cli": "^12.1.4",

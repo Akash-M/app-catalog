@@ -3,6 +3,7 @@
 .eslintignore
 .gitignore
 .pnp.cjs
+.pnp.loader.mjs
 .pnp.js
 .prettierignore
 .prettierrc
