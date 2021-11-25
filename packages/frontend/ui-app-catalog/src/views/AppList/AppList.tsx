@@ -12,7 +12,7 @@ import './AppList.scss';
 export function AppList(): JSX.Element {
   const { t } = useTranslation(['Global', 'AppList']);
   const navigate = useNavigate();
-  const [visibleAppList, setVisibleAppList] = useState<AppCatalog.Catalog[]>(
+  const [visibleAppList, setVisibleAppList] = useState<Catalog.App[]>(
     [],
   );
 

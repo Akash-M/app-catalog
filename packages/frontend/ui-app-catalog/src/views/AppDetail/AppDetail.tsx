@@ -12,7 +12,7 @@ export function AppDetail(): JSX.Element {
   const { t } = useTranslation(['Global', 'AppDetail']);
   // TODO: fix type.
   const { id } = useParams<any>();
-  const [appDetail, setAppDetail] = useState<AppCatalog.Catalog>();
+  const [appDetail, setAppDetail] = useState<Catalog.App>();
   const [appReadme, setAppReadme] = useState<string>('');
   // TODO: specify error types.
   const [error, setError] = useState(false);
