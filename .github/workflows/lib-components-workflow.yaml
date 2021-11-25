@@ -25,5 +25,3 @@ jobs:
         run: yarn install
       - name: Run linter
         run: yarn workspace lib-components lint
-      - name: Run unit tests
-        run: yarn workspace lib-components test:unit
