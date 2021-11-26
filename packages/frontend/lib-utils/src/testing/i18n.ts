@@ -34,14 +34,14 @@ const getGenericTranslation = (
   return messages;
 };
 
-// Load only DE translations
+// Load only EN translations as that is the only language present at the moment.
 function sanitizeTranslationRecords(translationRecords: Record<string, any>) {
-  const deMessages: Record<string, any> = {};
+  const enMessages: Record<string, any> = {};
   for (const [ns, values] of Object.entries(translationRecords)) {
-    deMessages[ns] = getGenericTranslation(values, ns);
+    enMessages[ns] = getGenericTranslation(values, ns);
   }
   return {
-    de: deMessages,
+    en: enMessages,
   };
 }
 
@@ -50,8 +50,8 @@ export function loadI18n(
   translationRecords: Record<string, any>,
 ): typeof i18n {
   void i18n.init({
-    lng: 'de',
-    fallbackLng: 'de',
+    lng: 'en',
+    fallbackLng: 'en',
     defaultNS: defaultNamespace,
     // Include all namespaces.
     ns: Object.keys(translationRecords),
@@ -61,13 +61,13 @@ export function loadI18n(
     interpolation: {
       escapeValue: false,
     },
-    // This will help us find in which namespace the key is missing
+    // This helps to find find in which namespace the key is missing.
     appendNamespaceToMissingKey: true,
     parseMissingKeyHandler(key) {
       return `${I18N_MISSING_KEY}: ${key}`;
     },
     react: {
-      // Do not trigger DOM updates when changing language
+      // Prevent triggering of DOM updates when switching language.
       bindI18n: false,
       useSuspense: true,
     },

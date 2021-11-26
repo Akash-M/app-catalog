@@ -25,7 +25,7 @@ function setI18n(
   cacheExpirationTime = 7 * 24 * 60 * 60 * 1000,
 ): typeof i18n {
   void i18n
-    // For now we will use DE as default language
+    // For the moment, only EN translations are loaded.
     // .use(LanguageDetector)
     .use(ChainedBackend)
     .use(initReactI18next)
