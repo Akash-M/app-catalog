@@ -25,9 +25,9 @@ The app is based on React 17 using hooks based approach.
 #### Running unit tests
 
 The app is tested primarily through unit tests using [jest](https://jestjs.io/) and
-[react-testing-library](https://testing-library.com/docs/react-testing-library/intro/).
-Unit testing React components uses integrated approach. This helps with ensuring that we can test the components
-from top down including all the relevant child components in their entirety.
+[react-testing-library](https://testing-library.com/docs/react-testing-library/intro/). Unit testing React components
+uses integrated approach. This helps with ensuring that we can test the components from top down including all the
+relevant child components in their entirety.
 
 Running unit tests in coverage mode:
 
@@ -55,9 +55,23 @@ The build is generated in the `build` folder.
 
 ### Linting
 
-- The app is linted through custom `eslint` rules specified globally. Additionally, we make use
-  of `prettier` and `stylelint` to automate as much as possible.
+- The app is linted through custom `eslint` rules specified globally. Additionally, we make use of `prettier`
+  and `stylelint` to automate as much as possible.
 
 ```sh
 yarn workspace ui-app-catalog lint
+```
+
+### Analyzing bundle:
+
+- To analyze the build generated, run
+
+```sh
+yarn workspace ui-app-catalog build:gen-stats
+```
+
+And then run the visualizer:
+
+```sh
+yarn workspace ui-app-catalog start:webpack-analyzer
 ```

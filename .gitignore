@@ -31,5 +31,5 @@ yarn-error.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# E2E tests:
-# TBD
+# Analyzer
+stats.json

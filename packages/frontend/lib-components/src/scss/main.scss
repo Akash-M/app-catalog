@@ -1,23 +1,22 @@
 @import './chip';
-@import './fonts';
 @import './tile';
 
 html {
-  font-size: 16px;
-  height: -webkit-fill-available;
+	font-size: 16px;
+	height: -webkit-fill-available;
 }
 
 #root {
-  height: 100%;
-  height: -webkit-fill-available;
+	height: 100%;
+	height: -webkit-fill-available;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+	margin: 0;
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
 
-  * {
-    font-family: Lato, Arial, Helvetica, sans-serif;
-  }
+	* {
+		font-family: Lato, Arial, Helvetica, sans-serif;
+	}
 }

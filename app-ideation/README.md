@@ -56,6 +56,8 @@ Some additional features which would be nice to have in the future:
   backend side as well.
 - a default loader component (something like a spinner) should be added as fallback for Suspense when lazy loading React
   components.
+- setup `e2e` tests with cypress
+- improve accessibility
 
 ### Technical Improvements:
 
