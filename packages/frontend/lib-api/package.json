@@ -1,7 +1,7 @@
 {
   "name": "lib-api",
   "version": "0.0.1",
-  "description": "Library of api for consent app",
+  "description": "Library of api for app catalog",
   "keywords": [
     "lib"
   ],
