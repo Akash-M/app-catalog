@@ -59,7 +59,7 @@ Documentation about application ideation and wireframes for Figma can be found u
 This application follows a monorepo approach. The following sections explains the folder structure:
 
 - `./.github/`: PR templates and Github Action definitions.
-- `./.yarn/`: Dependencies installed from yarn2.
+- `./.yarn/`: Dependencies installed from yarn3.
 - `./packages/`: TypeScript applications defined as independent modules.
   - `frontend/`: Folder containing the frontend application and related code.
     - `lib-api`: Library of global api calls. Consists of mocked api calls for sake of demo.
