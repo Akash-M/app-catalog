@@ -28746,6 +28746,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["react-select-event", [
+        ["npm:5.3.0", {
+          "packageLocation": "./.yarn/cache/react-select-event-npm-5.3.0-bcc292bf8b-82cd6a35d9.zip/node_modules/react-select-event/",
+          "packageDependencies": [
+            ["react-select-event", "npm:5.3.0"],
+            ["@testing-library/dom", "npm:8.11.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["react-shallow-renderer", [
         ["npm:16.14.1", {
           "packageLocation": "./.yarn/cache/react-shallow-renderer-npm-16.14.1-b8a4f845ff-f344c663c4.zip/node_modules/react-shallow-renderer/",
@@ -33320,6 +33330,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-router", "virtual:18ca36b8f57d61a05a397593c3dd635e2a72da57092cd944653af9d754c426070e10dfa0e88125110e232576cced0e042a997059d6f43044f5f4d90ab3fe04f6#npm:6.0.2"],
             ["react-router-dom", "virtual:18ca36b8f57d61a05a397593c3dd635e2a72da57092cd944653af9d754c426070e10dfa0e88125110e232576cced0e042a997059d6f43044f5f4d90ab3fe04f6#npm:6.0.2"],
             ["react-select", "virtual:18ca36b8f57d61a05a397593c3dd635e2a72da57092cd944653af9d754c426070e10dfa0e88125110e232576cced0e042a997059d6f43044f5f4d90ab3fe04f6#npm:5.2.1"],
+            ["react-select-event", "npm:5.3.0"],
             ["react-test-renderer", "virtual:9f2cbc7be51ca21dc9354918e6e147c69264bc980a4cd57209e7c7df73e2e035fe31911e3411e7f16d754a417edecd2505cc4a4d5f50c557458ff81d2dad30b7#npm:17.0.2"],
             ["react-toastify", "virtual:18ca36b8f57d61a05a397593c3dd635e2a72da57092cd944653af9d754c426070e10dfa0e88125110e232576cced0e042a997059d6f43044f5f4d90ab3fe04f6#npm:8.1.0"],
             ["recoil", "virtual:18ca36b8f57d61a05a397593c3dd635e2a72da57092cd944653af9d754c426070e10dfa0e88125110e232576cced0e042a997059d6f43044f5f4d90ab3fe04f6#npm:0.5.2"],

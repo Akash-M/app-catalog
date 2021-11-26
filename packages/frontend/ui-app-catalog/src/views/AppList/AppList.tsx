@@ -43,6 +43,7 @@ export function AppList(): JSX.Element {
         <Select
           isMulti
           className="filter"
+          name="author-filter"
           options={authorList}
           placeholder={'Filter by Author'}
           onChange={(e) => handleAuthorSelect(e)}

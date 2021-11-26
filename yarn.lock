@@ -5018,7 +5018,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:*, @testing-library/dom@npm:^8.0.0":
+"@testing-library/dom@npm:*, @testing-library/dom@npm:>=7, @testing-library/dom@npm:^8.0.0":
   version: 8.11.1
   resolution: "@testing-library/dom@npm:8.11.1"
   dependencies:
@@ -21161,6 +21161,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"react-select-event@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "react-select-event@npm:5.3.0"
+  dependencies:
+    "@testing-library/dom": ">=7"
+  checksum: 82cd6a35d9cc3b4acb30a75a4b3a4fbf42122d319b64b2f98d9f0e12eebdd9525af91b2e55abaf32d0b232cc2a9455276018cb1e58e7a2ed2921c24db2b818a0
+  languageName: node
+  linkType: hard
+
 "react-select@npm:^5.2.1":
   version: 5.2.1
   resolution: "react-select@npm:5.2.1"
@@ -24898,6 +24907,7 @@ typescript@^4.3.5:
     react-router: ^6.0.2
     react-router-dom: ^6.0.2
     react-select: ^5.2.1
+    react-select-event: ^5.3.0
     react-test-renderer: ^17.0.2
     react-toastify: ^8.1.0
     recoil: ^0.5.2
