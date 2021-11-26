@@ -14,7 +14,7 @@ This project needs the version of `node` as specified in the respective package.
 
 #### Starting the app in dev mode:
 
-The app will run on port 9000 by default as configured in the `start:dev` script.
+The app will run on port 4200 by default as configured in the `start:dev` script.
 
 ```sh
 yarn workspace ui-app-catalog start
