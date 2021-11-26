@@ -56,9 +56,12 @@ Some additional features which would be nice to have in the future:
   backend side as well.
 - a default loader component (something like a spinner) should be added as fallback for Suspense when lazy loading React
   components.
+- setup `e2e` tests with cypress
+- improve accessibility
 
 ### Technical Improvements:
 
+- Reduce load times by improving caching policy for images (one option is to use CDN to deliver image assets like logos)
 - Create a `backend` folder inside `packages` and migrate the backend project into this repo. Would bring some benefits
   like:
     - sharing types with the backend to ensure more project wide type safety.

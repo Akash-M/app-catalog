@@ -23,17 +23,26 @@ You can test if yarn is installed correctly by using:
 yarn --version
 ```
 
-Upgrade dependencies:
+### Step 1: Install dependencies:
 
 ```sh
-npx yarn-upgrade-all
+yarn
 ```
+
+### Step 2: Setup the backend app:
+
+Ensure that you have the backend running after checking out the code
+from [here](https://github.com/giantswarm/fe-hiring-task-api).
+
+### Step 3: Start the frontend app:
 
 Start `ui-app-catalog` app
 
 ```sh
 yarn start:frontend
 ```
+
+### Step 4(Optional): Run storybook to display component library:
 
 Start `lib-components` app
 
