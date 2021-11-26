@@ -61,6 +61,7 @@ Some additional features which would be nice to have in the future:
 
 ### Technical Improvements:
 
+- Reduce load times by improving caching policy for images (one option is to use CDN to deliver image assets like logos)
 - Create a `backend` folder inside `packages` and migrate the backend project into this repo. Would bring some benefits
   like:
     - sharing types with the backend to ensure more project wide type safety.
