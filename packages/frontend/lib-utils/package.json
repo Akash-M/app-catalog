@@ -83,6 +83,7 @@
     "react-dom": "*",
     "react-i18next": "*",
     "react-router-dom": "*",
+    "recoil": "*",
     "typescript": "*",
     "yaml": "*"
   }
